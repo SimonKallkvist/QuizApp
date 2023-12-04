@@ -1,0 +1,41 @@
+:root {
+    /* Heading sizes */
+    --_h1Size: 3.6rem;
+    --_h2Size: 2.8rem;
+    --_h3Size: 2rem;
+
+    /* Padding and margins and radius*/
+    --_large: 3rem;
+    --_medium: 1.5rem;
+    --_small: .5rem;
+
+}
+
+/* Global Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Mono', monospace;;
+}
+
+/* Setting Font size to 10px = 1rem */
+html {
+    font-size: 62.5%;
+}
+
+/* -_- */
+
+body {
+    font-size: 1.6rem;
+}
+
+/* Specific for headings */
+h1,h2,h3,h4 {
+    font-family: 'Roboto Slab', serif;
+    font-weight: 700;
+}
+
+h1 {
+    font-size: var(--_h1Size);
+}
