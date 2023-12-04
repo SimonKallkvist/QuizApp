@@ -1,4 +1,6 @@
 // -_-
+
+// Question array
 let questions = [
     {
       question: 'The largest planet in our solar system is:',
@@ -116,4 +118,29 @@ let questions = [
     }
   ];
 
-  
+//   Global declaration of the begin buttons
+let startQuizBtn = document.getElementById('startQuiz');
+let nextBtn = document.getElementById('nextBtn');
+
+
+// Global declaration of questionIndex and scoreCounter.
+let questionIndex = 0;
+let scoreCounter = 0;
+
+// Changing from begin slide to the "instructions slide"
+startQuizBtn.addEventListener('click', () => {
+    // Targeting the welcome slide and setting a timer on its vanishing
+    let helloThere = document.querySelector('.helloThere');
+    helloThere.style.scale = '0';
+    setTimeout(function(){
+        helloThere.style.display = 'none'
+   },200); //delay is in milliseconds 
+   
+   //targeting the main quiz window and displaying the "rules"
+    let quizApp = document.querySelector('.quizApp'); 
+    quizApp.style.display = 'block';
+    setTimeout(function(){
+        quizApp.style.scale = '1';     
+   },500); //delay is in milliseconds 
+   
+});

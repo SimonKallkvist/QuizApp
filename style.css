@@ -56,6 +56,12 @@ h1 {
     font-size: var(--_h1Size);
 }
 
+#quizName {
+    border-bottom: 1px solid #fff;
+    padding-bottom: var(--_large);
+    margin-bottom: var(--_small);
+}
+
 /* -_- */
 
 /* Styling the greet */
@@ -65,6 +71,9 @@ h1 {
     max-width: 60rem;
     text-align: center;
     margin: 30rem auto 0;
+    transition: all .2s ease-in-out;
+    scale: 1;
+    transition: scale .2s;
 }
 
 .helloThere h1 {
@@ -123,13 +132,20 @@ h1 {
     background: rgba(255, 255, 255, 0.157);
     width: 90%;
     max-width: 60rem;
-    margin: 10rem auto 0;
+    margin: 20rem auto 0;
     border-radius: 1rem;
     padding: 3rem;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, .3);
     border-radius: var(--_medium);
     overflow: hidden;
     display: none;
+    scale: 0;
+    display: none;
+    transition: scale .2s ease;
+}
+
+.quizApp h1, .quizApp h2, .quizApp p {
+    color: #fff;
 }
 
 .quizBg {
@@ -138,10 +154,14 @@ h1 {
     left: 0;
     width: 100%;
     height: 100%;
-    background: radial-gradient(circle at 60% 40%, #e49546 25%, transparent 26%),radial-gradient(circle at 40% 60%, #e4464e80 25%, transparent 26%) ;
+    background: radial-gradient(circle at 60% 40%, #85480a 25%, transparent 26%),radial-gradient(circle at 40% 60%, #7c0f1580 25%, transparent 26%) ;
     background-size: 10rem 10rem;
     background-color: #222;
     opacity: .9;
     z-index: -1;
 }
+
+/* -_- */
+
+
 
