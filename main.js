@@ -117,15 +117,22 @@ let questions = [
       typeOfQuestion: 'trueOrFalse'
     }
   ];
+// -_-
 
 //   Global declaration of the begin buttons
 let startQuizBtn = document.getElementById('startQuiz');
 let nextBtn = document.getElementById('nextBtn');
+// -_-
 
+// Global declaration of elments from the DOM
+let answerBox = document.getElementById('answerChoices');
+let questionShow = document.getElementById('theQuestion');
 
-// Global declaration of questionIndex and scoreCounter.
-let questionIndex = 0;
-let scoreCounter = 0;
+ // Global declaration of questionIndex and scoreCounter.
+ let questionIndex = 0;
+ let scoreCounter = 0;
+// -_-
+
 
 // Changing from begin slide to the "instructions slide"
 startQuizBtn.addEventListener('click', () => {
@@ -134,13 +141,67 @@ startQuizBtn.addEventListener('click', () => {
     helloThere.style.scale = '0';
     setTimeout(function(){
         helloThere.style.display = 'none'
-   },200); //delay is in milliseconds 
+   },200); 
    
    //targeting the main quiz window and displaying the "rules"
     let quizApp = document.querySelector('.quizApp'); 
     quizApp.style.display = 'block';
     setTimeout(function(){
         quizApp.style.scale = '1';     
-   },500); //delay is in milliseconds 
+   },500); 
    
 });
+// -_-
+
+// Setting initial values before quiz start
+function startQuiz() {
+    questionIndex = 0;
+    scoreCounter = 0;
+    nextBtn.innerHTML = 'Next';
+    showQuestions();
+}
+// -_-
+
+// Listening to the next button
+nextBtn.addEventListener('click', () => {
+    if (questionIndex < questions.length){
+        alert('Hej')
+    }else{
+        alert('nåt gick fel')
+    }
+});
+// -_-
+
+// Funktion för att visa frågorna.
+function showQuestions(){
+    resetQuestionBox();
+
+    // Declaring the question and number.
+    let currentQuestion = questions[questionIndex];
+    let currentQuestionNum = currentQuestion + 1;
+    // -_-
+
+    // setting the value of the h2 to the question and number
+    questionShow.innerHTML = currentQuestionNum + '. ' + currentQuestion.question;
+
+    // looping and appending the answers to the answer box
+    currentQuestion.answers.forEach(answer => {
+        let button = document.createElement('button');
+        button.innerHTML = answer;
+        button.classList.add('btn');
+        button.classList.add('btnAnswers');
+        answerBox.appendChild(button);
+    });
+}
+// -_-
+
+//Funktion för att ta bort next knapp innan svar är givet!
+function resetQuestionBox(){
+    nextBtn.style.display = 'none';
+    while(answerBox.firstChild){
+        answerBox.removeChild(answerBox.firstChild);
+    }
+}
+// -_-
+
+startQuiz();
