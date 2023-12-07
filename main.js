@@ -51,7 +51,7 @@ let questions = [
       typeOfQuestion: 'radio'
     },
     {
-      question: 'The asteroid belt is located between which two planets?',
+      question: 'The asteroid belt is located between which two planets? (Select all that apply)',
       answers: [
         {text: 'Earth and Mars', correct: false}, 
         {text: 'Mars and Jupiter', correct: true}, 
@@ -66,7 +66,7 @@ let questions = [
       typeOfQuestion: 'trueOrFalse'
     },
     {
-      question: 'Which moon is known for its geysers of water vapor? ',
+      question: 'Which moon is known for its geysers of water vapor? (Select all that apply)',
       answers: [
         {text: 'Europa', correct: false}, 
         {text: 'Ganymede', correct: false}, 
@@ -115,7 +115,7 @@ let questions = [
       typeOfQuestion: 'radio'
     },
     {
-      question: 'The sun is a:',
+      question: 'The sun is a: (Select all that apply)',
       answers: [
         {text: 'Planet', correct: false}, 
         {text: 'Moon', correct: false},
@@ -158,45 +158,43 @@ let questions = [
 // -_-
 
 //   Global declaration of the begin buttons
-let startQuizBtn = document.getElementById('startQuiz');
-let nextBtn = document.getElementById('nextBtn');
+let startQuizBtn = document.getElementById("startQuiz");
+let nextBtn = document.getElementById("nextBtn");
 // -_-
 
 // Global declaration of elments from the DOM
-let answerBox = document.getElementById('answerChoices');
-let questionShow = document.getElementById('theQuestion');
+let answerBox = document.getElementById("answerChoices");
+let questionShow = document.getElementById("theQuestion");
 
- // Global declaration of questionIndex and scoreCounter.
- let questionIndex = 0;
- let scoreCounter = 0;
+// Global declaration of questionIndex and scoreCounter.
+let questionIndex = 0;
+let scoreCounter = 0;
 // -_-
 
-
 // Changing from begin slide to the "instructions slide"
-startQuizBtn.addEventListener('click', () => {
-    // Targeting the welcome slide and setting a timer on its vanishing
-    let helloThere = document.querySelector('.helloThere');
-    helloThere.style.scale = '0';
-    setTimeout(function(){
-        helloThere.style.display = 'none'
-   },200); 
-   
-   //targeting the main quiz window and displaying the "rules"
-    let quizApp = document.querySelector('.quizApp'); 
-    quizApp.style.display = 'block';
-    setTimeout(function(){
-        quizApp.style.scale = '1';     
-   },500); 
-   
+startQuizBtn.addEventListener("click", () => {
+  // Targeting the welcome slide and setting a timer on its vanishing
+  let helloThere = document.querySelector(".helloThere");
+  helloThere.style.scale = "0";
+  setTimeout(function () {
+    helloThere.style.display = "none";
+  }, 200);
+
+  //targeting the main quiz window and displaying the "rules"
+  let quizApp = document.querySelector(".quizApp");
+  quizApp.style.display = "block";
+  setTimeout(function () {
+    quizApp.style.scale = "1";
+  }, 500);
 });
 // -_-
 
 // Setting initial values before quiz start
 function startQuiz() {
-    questionIndex = 0;
-    scoreCounter = 0;
-    nextBtn.innerHTML = 'Next';
-    showQuestions();
+  questionIndex = 0;
+  scoreCounter = 0;
+  nextBtn.innerHTML = "Next";
+  showQuestions();
 }
 // -_-
 
@@ -211,119 +209,117 @@ function startQuiz() {
 // -_-
 
 // Funktion för att visa frågorna.
-function showQuestions(){
-    resetQuestionBox();
+function showQuestions() {
+  resetQuestionBox();
 
-    // Declaring the question and number.
-    let currentQuestion = questions[questionIndex];
-    let currentQuestionNum = questionIndex + 1;
-    // -_-
+  // Declaring the question and number.
+  let currentQuestion = questions[questionIndex];
+  let currentQuestionNum = questionIndex + 1;
+  // -_-
 
-    // setting the value of the h2 to the question and number
-    questionShow.innerHTML = currentQuestionNum + '. ' + currentQuestion.question;
+  // setting the value of the h2 to the question and number
+  questionShow.innerHTML = currentQuestionNum + ". " + currentQuestion.question;
 
-
-    // Checking what type of question
-    if(currentQuestion.typeOfQuestion === 'trueOrFalse'){
-        drawTrueFalse(currentQuestion.answers);
-    }else if(currentQuestion.typeOfQuestion === 'radio'){
-        drawRadio(currentQuestion.answers);
-    }else /*(currentQuestion.typeOfQuestion === 'checkbox')*/{
-        drawCheckbox(currentQuestion.answers);
-    }
-    // -_-
-    // // looping and appending the answers to the answer box
-    // currentQuestion.answers.forEach(answer => {
-    //     let button = document.createElement('button');
-    //     button.innerHTML = answer.text;
-    //     button.classList.add('btn');
-    //     button.classList.add('btnAnswers');
-    //     answerBox.appendChild(button);
-    // });
-    // // -_-
+  // Checking what type of question
+  if (currentQuestion.typeOfQuestion === "trueOrFalse") {
+    drawTrueFalse(currentQuestion.answers);
+  } else if (currentQuestion.typeOfQuestion === "radio") {
+    drawRadio(currentQuestion.answers);
+  } /*(currentQuestion.typeOfQuestion === 'checkbox')*/ else {
+    drawCheckbox(currentQuestion.answers);
+  }
+  // -_-
+  // // looping and appending the answers to the answer box
+  // currentQuestion.answers.forEach(answer => {
+  //     let button = document.createElement('button');
+  //     button.innerHTML = answer.text;
+  //     button.classList.add('btn');
+  //     button.classList.add('btnAnswers');
+  //     answerBox.appendChild(button);
+  // });
+  // // -_-
 }
 // -_-
 
 //Funktion för att ta bort next knapp innan svar är givet!
-function resetQuestionBox(){
-    nextBtn.style.display = 'none';
-    while(answerBox.firstChild){
-        answerBox.removeChild(answerBox.firstChild);
-    }
+function resetQuestionBox() {
+  nextBtn.style.display = "none";
+  while (answerBox.firstChild) {
+    answerBox.removeChild(answerBox.firstChild);
+  }
 }
 // -_-
 
-
 // Print True or Fasle QuestionS
-function drawTrueFalse(question){
-     // looping and appending the answers to the answer box
-     question.forEach(answer => {
-        let button = document.createElement('button');
-        button.innerHTML = answer.text;
-        button.classList.add('btn');
-        button.classList.add('btnAnswers');
-        answerBox.appendChild(button);
+function drawTrueFalse(question) {
+  // looping and appending the answers to the answer box
+  question.forEach((answer) => {
+    let button = document.createElement("button");
+    button.innerHTML = answer.text;
+    button.classList.add("btn");
+    button.classList.add("btnAnswers");
+    answerBox.appendChild(button);
 
-        // Check if right answer ios choosen
-        if(answer.correct){
-            console.log(answer.correct);
-            button.dataset.correct = answer.correct;
-        }
-        button.addEventListener('click', selectAnswer);
-        // -_-
-    });
+    // Check if right answer is choosen
+    if (answer.correct) {
+      console.log(answer.correct);
+      button.dataset.correct = answer.correct;
+    }
+    button.addEventListener("click", selectAnswer);
     // -_-
+  });
+  // -_-
 }
 // -_-
 
 // Print radio questions
-function drawRadio(question){
-    console.log(question);
-    question.forEach(answer => {
-        console.log(answer);
-        let radioBtn = document.createElement('input');
-        radioBtn.type = 'radio';
-        radioBtn.name = 'radioGroup';
-        radioBtn.value = answer.text;
-        let radioLabel = document.createElement('label');
+function drawRadio(question) {
+  console.log(question);
+  question.forEach((answer) => {
+    console.log(answer);
+    let radioBtn = document.createElement("input");
+    radioBtn.type = "radio";
+    radioBtn.name = "radioGroup";
+    radioBtn.value = answer.text;
+    let radioLabel = document.createElement("label");
 
-        radioLabel.appendChild(radioBtn);
-        radioLabel.appendChild(document.createTextNode(answer.text));
+    radioLabel.appendChild(radioBtn);
+    radioLabel.appendChild(document.createTextNode(answer.text));
 
-        answerBox.appendChild(radioLabel);
+    answerBox.appendChild(radioLabel);
 
-         // Check if right answer ios choosen
-         if(answer.correct){
-            console.log(answer.correct);
-            radioBtn.dataset.correct = answer.correct;
-        }
-        radioBtn.addEventListener('click', selectAnswer);
-        // -_-
-    });
+    // Check if right answer ios choosen
+    if (answer.correct) {
+      console.log(answer.correct);
+      radioBtn.dataset.correct = answer.correct;
+    }
+    radioBtn.addEventListener("click", selectAnswer);
+    // -_-
+  });
 }
 // -_-
 
 // Print Checkbox questions
-function drawCheckbox(question){
-    question.forEach(answer => {
-        let checkBtn = document.createElement('input');
-        checkBtn.type = 'checkbox';
-        checkBtn.name = 'checkGroup';
-        checkBtn.value = answer.text;
-        let checkLabel = document.createElement('label');
+function drawCheckbox(question) {
+  question.forEach((answer) => {
+    let checkBtn = document.createElement("input");
+    checkBtn.type = "checkbox";
+    checkBtn.name = "checkGroup";
+    checkBtn.value = answer.text;
+    let checkLabel = document.createElement("label");
 
-        checkLabel.appendChild(checkBtn);
-        checkLabel.appendChild(document.createTextNode(answer.text));
+    checkLabel.appendChild(checkBtn);
+    checkLabel.appendChild(document.createTextNode(answer.text));
 
-        answerBox.appendChild(checkLabel);
-         // Check if right answer ios choosen
-         if(answer.correct){
-            console.log(answer.correct);
-            checkBtn.dataset.correct = answer.correct;
-        }
-        checkBtn.addEventListener('click', selectAnswer);
-        // -_-
-});
+    answerBox.appendChild(checkLabel);
+    // Check if right answer ios choosen
+    if (answer.correct) {
+      console.log(answer.correct);
+      checkBtn.dataset.correct = answer.correct;
+    }
+    checkBtn.addEventListener("click", selectAnswer);
+    // -_-
+  });
 }
 // -_-
 
@@ -335,7 +331,7 @@ function selectAnswer(e){
     if(correctAnswer){
         scoreCounter++;
     }
-    // Adding the choosen class
+    // Adding the choosen btn
     selected.classList.add('choosen');
     // -_-
     
@@ -343,47 +339,46 @@ function selectAnswer(e){
     Array.from(answerChoices.children).forEach(child => {
         child.classList.add('disabled');
     });
-    // -_-
-
-    nextBtn.style.display = 'block';
-    console.log(scoreCounter);
+  }
+  // -_-
+  // console.log(scoreCounter);
+  nextBtn.style.display = "block";
+  // console.log(scoreCounter);
 }
 //-_-
 
 // Handel on click of next Btn
 
-nextBtn.addEventListener('click', () => {
-    
-    if(questionIndex < questions.length){
-        nextQuestion();
-        console.log(questionIndex);
-    }else{
-        startQuiz();
-        console.log('balle');
-    }
+nextBtn.addEventListener("click", () => {
+  if (questionIndex < questions.length) {
+    nextQuestion();
+    console.log(questionIndex);
+  } else {
+    startQuiz();
+    console.log("balle");
+  }
 });
 
 // -_-
 
 // Start the new question
-function nextQuestion(){
-    questionIndex++;
-    if(questionIndex < questions.length){
-        showQuestions();
-    }else {
-        showScore();
-    }
+function nextQuestion() {
+  questionIndex++;
+  if (questionIndex < questions.length) {
+    showQuestions();
+  } else {
+    showScore();
+  }
 }
 // -_-
 
 // Reveal Score at the end
-function showScore(){
-    resetQuestionBox();
-    questionShow.innerHTML = `You scored a ${scoreCounter} out of ${questions.length} possible!`
-    nextBtn.innerHTML = 'Play Again?';
-    nextBtn.style.display = 'block';
+function showScore() {
+  resetQuestionBox();
+  questionShow.innerHTML = `You scored a ${scoreCounter} out of ${questions.length} possible!`;
+  nextBtn.innerHTML = "Play Again?";
+  nextBtn.style.display = "block";
 }
 // -_-
-
 
 startQuiz();
