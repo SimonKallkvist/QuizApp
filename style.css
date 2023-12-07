@@ -8,6 +8,43 @@
   --_large: 3rem;
   --_medium: 1.5rem;
   --_small: 0.5rem;
+
+  /* Variables */
+
+  --s: 222px; /* control the size */
+  --c1: #a85a90;
+  --c2: rgb(19, 185, 200);
+  --c3: #baa0ab;
+
+  --_g: var(--c1) 10%, var(--c2) 10.5% 19%, #0000 19.5% 80.5%,
+    var(--c2) 81% 89.5%, var(--c3) 90%;
+  --_c: from -90deg at 37.5% 50%, #0000 75%;
+  --_l1: linear-gradient(145deg, var(--_g));
+  --_l2: linear-gradient(35deg, var(--_g));
+
+  /* Backgrounds */
+  --_lightBg: var(--_l1), var(--_l1) calc(var(--s) / 2) var(--s), var(--_l2),
+  var(--_l2) calc(var(--s) / 2) var(--s),
+  conic-gradient(var(--_c), var(--c1) 0) calc(var(--s) / 8) 0,
+  conic-gradient(var(--_c), var(--c3) 0) calc(var(--s) / 2) 0,
+  linear-gradient(
+    90deg,
+    var(--c3) 38%,
+    var(--c1) 0 50%,
+    var(--c3) 0 62%,
+    var(--c1) 0
+  );
+
+  --_darkBg: black;
+
+  /* Font Colors */
+  --_lightText: #fff;
+  --_darkText: black;
+
+  /* Bg Sizes */
+    --_bgSize: var(--s) calc(2 * var(--s) / 3);
+
+    --_darkBgSize: cover;
 }
 
 /* Global Styling */
@@ -21,35 +58,21 @@
 /* Setting Font size to 10px = 1rem */
 html {
   font-size: 62.5%;
-  --s: 222px; /* control the size */
-  --c1: #a85a90;
-  --c2: rgb(19, 185, 200);
-  --c3: #baa0ab;
-
-  --_g: var(--c1) 10%, var(--c2) 10.5% 19%, #0000 19.5% 80.5%,
-    var(--c2) 81% 89.5%, var(--c3) 90%;
-  --_c: from -90deg at 37.5% 50%, #0000 75%;
-  --_l1: linear-gradient(145deg, var(--_g));
-  --_l2: linear-gradient(35deg, var(--_g));
 }
 
 /* -_- */
 
 body {
   font-size: 1.6rem;
-  background: var(--_l1), var(--_l1) calc(var(--s) / 2) var(--s), var(--_l2),
-    var(--_l2) calc(var(--s) / 2) var(--s),
-    conic-gradient(var(--_c), var(--c1) 0) calc(var(--s) / 8) 0,
-    conic-gradient(var(--_c), var(--c3) 0) calc(var(--s) / 2) 0,
-    linear-gradient(
-      90deg,
-      var(--c3) 38%,
-      var(--c1) 0 50%,
-      var(--c3) 0 62%,
-      var(--c1) 0
-    );
-  background-size: var(--s) calc(2 * var(--s) / 3);
+  background:var(--_lightBg);
+  background-size:var(--_bgSize);
+  color: var(--_darkText);
+  margin: 0;
+  padding: 0;
+  /* min-height: 100vh; */
 }
+
+
 
 /* Specific for headings */
 h1,
@@ -200,5 +223,42 @@ label {
 /* Choosen class */
 .choosen {
   box-shadow: 0px 0px 10px rgba(225, 255, 0, 0.9);
+}
+/* -_- */
+
+
+/* DarkMode Stuff */
+.darkMode {
+    background:var(--_darkBg);
+    background-size:var(--_darkBgSize);
+    color: var(--_lightText);
+    min-height: 100vh;
+    top: 0;
+}
+
+#darkMode {
+    background: transparent;
+    outline: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    padding: 1rem;
+    height: 5rem;
+    width: 5rem;
+    position: absolute;
+    right: 10rem;
+    top: 10rem;
+}
+
+#darkMode:hover{
+    box-shadow: 0px 0px 4px rgba(255, 255, 255, .7);
+}
+
+#darkMode i{
+    color: white;
+    background: transparent;
+    font-size: 4rem;
 }
 /* -_- */
