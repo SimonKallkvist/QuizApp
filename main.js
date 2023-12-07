@@ -51,7 +51,7 @@ let questions = [
       typeOfQuestion: 'radio'
     },
     {
-      question: 'The asteroid belt is located between which two planets? (Select all that apply)',
+      question: 'The asteroid belt is located between which two planets?',
       answers: [
         {text: 'Earth and Mars', correct: false}, 
         {text: 'Mars and Jupiter', correct: true}, 
@@ -66,7 +66,7 @@ let questions = [
       typeOfQuestion: 'trueOrFalse'
     },
     {
-      question: 'Which moon is known for its geysers of water vapor? (Select all that apply)',
+      question: 'Which moon is known for its geysers of water vapor? ',
       answers: [
         {text: 'Europa', correct: false}, 
         {text: 'Ganymede', correct: false}, 
@@ -115,7 +115,7 @@ let questions = [
       typeOfQuestion: 'radio'
     },
     {
-      question: 'The sun is a: (Select all that apply)',
+      question: 'The sun is a:',
       answers: [
         {text: 'Planet', correct: false}, 
         {text: 'Moon', correct: false},
@@ -335,7 +335,7 @@ function selectAnswer(e){
     if(correctAnswer){
         scoreCounter++;
     }
-    // Adding the choosen btn
+    // Adding the choosen class
     selected.classList.add('choosen');
     // -_-
     
