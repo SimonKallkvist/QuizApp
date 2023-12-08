@@ -30,7 +30,8 @@ let questions = [
         { text: "Mars", correct: false },
       ],
       typeOfQuestion: "checkbox",
-    },
+     }
+     ,
     {
       question: "The closest galaxy to the Milky Way is:",
       answers: [
@@ -39,146 +40,147 @@ let questions = [
         { text: "Whirlpool Galaxy", correct: false },
       ],
       typeOfQuestion: "radio",
-    },
-    {
-      question: "A light-year is a unit of time. (True/False)",
-      answers: [
-        { text: "True", correct: false },
-        { text: "False", correct: true },
-      ],
-      typeOfQuestion: "trueOrFalse",
-    },
-    {
-      question: 'Which planet is known as the "Red Planet"?',
-      answers: [
-        { text: "Mars", correct: true },
-        { text: "Venus", correct: false },
-        { text: "Jupiter", correct: false },
-      ],
-      typeOfQuestion: "radio",
-    },
-    {
-      question:
-        "The asteroid belt is located between which two planets? (Select all that apply)",
-      answers: [
-        { text: "Earth and Mars", correct: false },
-        { text: "Mars and Jupiter", correct: true },
-        { text: "Jupiter and Saturn", correct: false },
-      ],
-      typeOfQuestion: "radio",
-    },
-    {
-      question:
-        "The Hubble Space Telescope is named after the famous scientist Edwin Hubble. (True/False)",
-      answers: [
-        { text: "True", correct: false },
-        { text: "False", correct: false },
-      ],
-      typeOfQuestion: "trueOrFalse",
-    },
-    {
-      question:
-        "Which moon is known for its geysers of water vapor? (Select all that apply)",
-      answers: [
-        { text: "Europa", correct: false },
-        { text: "Ganymede", correct: false },
-        { text: "Enceladus", correct: true },
-        { text: "Io", correct: false },
-      ],
-      typeOfQuestion: "radio",
-    },
-    {
-      question: "The Great Red Spot is a storm on which planet?",
-      answers: [
-        { text: "Jupiter", correct: true },
-        { text: "Saturn", correct: false },
-        { text: "Neptune", correct: false },
-      ],
-      typeOfQuestion: "radio",
-    },
-    {
-      question: "A comet is primarily composed of:",
-      answers: [
-        { text: "Rock and Metal", correct: false },
-        { text: "Ice and Dust", correct: true },
-        { text: "Gas and Plasma", correct: false },
-      ],
-      typeOfQuestion: "radio",
-    },
-    {
-      question: "Pluto is classified as a dwarf planet. (True/False)",
-      answers: [
-        { text: "True", correct: true },
-        { text: "False", correct: false },
-      ],
-      typeOfQuestion: "trueOrFalse",
-    },
-    {
-      question: "Which planet is known for its beautiful ring system?",
-      answers: [
-        { text: "Saturn", correct: true },
-        { text: "Jupiter", correct: false },
-        { text: "Uranus", correct: false },
-        { text: "Pluto", correct: false },
-      ],
-      typeOfQuestion: "radio",
-    },
-    {
-      question: "The Oort Cloud is a region of space that contains primarily:",
-      answers: [
-        { text: "Comets", correct: true },
-        { text: "Asteroids", correct: false },
-        { text: "Dwarf Planets", correct: false },
-      ],
-      typeOfQuestion: "radio",
-    },
-    {
-      question: "The sun is a: (Select all that apply)",
-      answers: [
-        { text: "Planet", correct: false },
-        { text: "Moon", correct: false },
-        { text: "Star", correct: true },
-        { text: "Asteroid", correct: false },
-      ],
-      typeOfQuestion: "radio",
-    },
-    {
-      question: "The first human to walk on the moon was:",
-      answers: [
-        { text: "Buzz Aldrin", correct: false },
-        { text: "Neil Armstrong", correct: true },
-        { text: "Yuri Gagarin", correct: false },
-      ],
-      typeOfQuestion: "radio",
-    },
-    {
-      question: "Black holes emit light. (True/False)",
-      answers: [
-        { text: "True", correct: false },
-        { text: "False", correct: true },
-      ],
-      typeOfQuestion: "trueOrFalse",
-    },
-    {
-      question:
-        'Which of the following are considered "rocky" or "terrestrial" planets? (Select all that apply)',
-      answers: [
-        { text: "Earth", correct: true },
-        { text: "Jupiter", correct: false },
-        { text: "Mars", correct: true },
-        { text: "Venus", correct: true },
-      ],
-      typeOfQuestion: "checkbox",
-    },
-    {
-      question:
-        "The International Space Station (ISS) orbits the moon. (True/False)",
-      answers: [
-        { text: "True", correct: false },
-        { text: "False", correct: true },
-      ],
-      typeOfQuestion: "trueOrFalse",
-    },
+    }
+    //,
+    // {
+    //   question: "A light-year is a unit of time. (True/False)",
+    //   answers: [
+    //     { text: "True", correct: false },
+    //     { text: "False", correct: true },
+    //   ],
+    //   typeOfQuestion: "trueOrFalse",
+    // },
+    // {
+    //   question: 'Which planet is known as the "Red Planet"?',
+    //   answers: [
+    //     { text: "Mars", correct: true },
+    //     { text: "Venus", correct: false },
+    //     { text: "Jupiter", correct: false },
+    //   ],
+    //   typeOfQuestion: "radio",
+    // },
+    // {
+    //   question:
+    //     "The asteroid belt is located between which two planets? (Select all that apply)",
+    //   answers: [
+    //     { text: "Earth and Mars", correct: false },
+    //     { text: "Mars and Jupiter", correct: true },
+    //     { text: "Jupiter and Saturn", correct: false },
+    //   ],
+    //   typeOfQuestion: "radio",
+    // },
+    // {
+    //   question:
+    //     "The Hubble Space Telescope is named after the famous scientist Edwin Hubble. (True/False)",
+    //   answers: [
+    //     { text: "True", correct: false },
+    //     { text: "False", correct: false },
+    //   ],
+    //   typeOfQuestion: "trueOrFalse",
+    // },
+    // {
+    //   question:
+    //     "Which moon is known for its geysers of water vapor? (Select all that apply)",
+    //   answers: [
+    //     { text: "Europa", correct: false },
+    //     { text: "Ganymede", correct: false },
+    //     { text: "Enceladus", correct: true },
+    //     { text: "Io", correct: false },
+    //   ],
+    //   typeOfQuestion: "radio",
+    // },
+    // {
+    //   question: "The Great Red Spot is a storm on which planet?",
+    //   answers: [
+    //     { text: "Jupiter", correct: true },
+    //     { text: "Saturn", correct: false },
+    //     { text: "Neptune", correct: false },
+    //   ],
+    //   typeOfQuestion: "radio",
+    // },
+    // {
+    //   question: "A comet is primarily composed of:",
+    //   answers: [
+    //     { text: "Rock and Metal", correct: false },
+    //     { text: "Ice and Dust", correct: true },
+    //     { text: "Gas and Plasma", correct: false },
+    //   ],
+    //   typeOfQuestion: "radio",
+    // },
+    // {
+    //   question: "Pluto is classified as a dwarf planet. (True/False)",
+    //   answers: [
+    //     { text: "True", correct: true },
+    //     { text: "False", correct: false },
+    //   ],
+    //   typeOfQuestion: "trueOrFalse",
+    // },
+    // {
+    //   question: "Which planet is known for its beautiful ring system?",
+    //   answers: [
+    //     { text: "Saturn", correct: true },
+    //     { text: "Jupiter", correct: false },
+    //     { text: "Uranus", correct: false },
+    //     { text: "Pluto", correct: false },
+    //   ],
+    //   typeOfQuestion: "radio",
+    // },
+    // {
+    //   question: "The Oort Cloud is a region of space that contains primarily:",
+    //   answers: [
+    //     { text: "Comets", correct: true },
+    //     { text: "Asteroids", correct: false },
+    //     { text: "Dwarf Planets", correct: false },
+    //   ],
+    //   typeOfQuestion: "radio",
+    // },
+    // {
+    //   question: "The sun is a: (Select all that apply)",
+    //   answers: [
+    //     { text: "Planet", correct: false },
+    //     { text: "Moon", correct: false },
+    //     { text: "Star", correct: true },
+    //     { text: "Asteroid", correct: false },
+    //   ],
+    //   typeOfQuestion: "radio",
+    // },
+    // {
+    //   question: "The first human to walk on the moon was:",
+    //   answers: [
+    //     { text: "Buzz Aldrin", correct: false },
+    //     { text: "Neil Armstrong", correct: true },
+    //     { text: "Yuri Gagarin", correct: false },
+    //   ],
+    //   typeOfQuestion: "radio",
+    // },
+    // {
+    //   question: "Black holes emit light. (True/False)",
+    //   answers: [
+    //     { text: "True", correct: false },
+    //     { text: "False", correct: true },
+    //   ],
+    //   typeOfQuestion: "trueOrFalse",
+    // },
+    // {
+    //   question:
+    //     'Which of the following are considered "rocky" or "terrestrial" planets? (Select all that apply)',
+    //   answers: [
+    //     { text: "Earth", correct: true },
+    //     { text: "Jupiter", correct: false },
+    //     { text: "Mars", correct: true },
+    //     { text: "Venus", correct: true },
+    //   ],
+    //   typeOfQuestion: "checkbox",
+    // },
+    // {
+    //   question:
+    //     "The International Space Station (ISS) orbits the moon. (True/False)",
+    //   answers: [
+    //     { text: "True", correct: false },
+    //     { text: "False", correct: true },
+    //   ],
+    //   typeOfQuestion: "trueOrFalse",
+    // },
   ];
   // -_-
   
@@ -219,8 +221,10 @@ let questions = [
   function startQuiz() {
     questionIndex = 0;
     scoreCounter = 0;
+
     console.log(scoreCounter, questionIndex);
     nextBtn.innerHTML = "Next";
+
     showQuestions();
   }
   // -_-
@@ -400,9 +404,10 @@ let questions = [
       }
       console.log(questionIndex);
       console.log(scoreCounter);
-    } else {
+    } else { 
       startQuiz();
       console.log("balle");
+      questionShow.removeAttribute('style');
     }
   });
   
@@ -424,6 +429,13 @@ let questions = [
   function showScore() {
     resetQuestionBox();
     questionShow.innerHTML = `You scored a ${scoreCounter} out of ${questions.length} possible!`;
+    if(scoreCounter >= (questions.length)*.9){
+        questionShow.style.background = 'green';
+    }else if(scoreCounter <= (questions.length)*.75 && scoreCounter >= (questions.length)*.5){
+        questionShow.style.background = 'orange';
+    }else {
+        questionShow.style.background = 'red';
+    }
     nextBtn.innerHTML = "Play Again?";
     nextBtn.style.display = "block";
   }
@@ -447,7 +459,18 @@ let questions = [
   // -_-
 
   // Handelr of darkMode
+  let darkMode = document.querySelector('#darkMode');
+  let quizBg = document.querySelector('.quizBg');
 
+  darkMode.addEventListener('click', () => {
+    document.body.classList.toggle('darkMode');
+    quizBg.classList.toggle('quizBgDarkMode');
+    if(darkMode.innerHTML.includes('sun')){
+    darkMode.innerHTML = `<i class="fa-solid fa-moon"></i>`;
+}else {
+    darkMode.innerHTML = `<i class="fa-solid fa-sun"></i>`;
+}
+  });
   // -_-
   
   startQuiz();
