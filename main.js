@@ -30,9 +30,8 @@ let questions = [
         { text: "Mars", correct: false },
       ],
       typeOfQuestion: "checkbox",
-     }
-     ,
-    {
+     },
+     {
       question: "The closest galaxy to the Milky Way is:",
       answers: [
         { text: "Andromeda Galaxy", correct: true },
@@ -40,147 +39,146 @@ let questions = [
         { text: "Whirlpool Galaxy", correct: false },
       ],
       typeOfQuestion: "radio",
-    }
-    //,
-    // {
-    //   question: "A light-year is a unit of time. (True/False)",
-    //   answers: [
-    //     { text: "True", correct: false },
-    //     { text: "False", correct: true },
-    //   ],
-    //   typeOfQuestion: "trueOrFalse",
-    // },
-    // {
-    //   question: 'Which planet is known as the "Red Planet"?',
-    //   answers: [
-    //     { text: "Mars", correct: true },
-    //     { text: "Venus", correct: false },
-    //     { text: "Jupiter", correct: false },
-    //   ],
-    //   typeOfQuestion: "radio",
-    // },
-    // {
-    //   question:
-    //     "The asteroid belt is located between which two planets? (Select all that apply)",
-    //   answers: [
-    //     { text: "Earth and Mars", correct: false },
-    //     { text: "Mars and Jupiter", correct: true },
-    //     { text: "Jupiter and Saturn", correct: false },
-    //   ],
-    //   typeOfQuestion: "radio",
-    // },
-    // {
-    //   question:
-    //     "The Hubble Space Telescope is named after the famous scientist Edwin Hubble. (True/False)",
-    //   answers: [
-    //     { text: "True", correct: false },
-    //     { text: "False", correct: false },
-    //   ],
-    //   typeOfQuestion: "trueOrFalse",
-    // },
-    // {
-    //   question:
-    //     "Which moon is known for its geysers of water vapor? (Select all that apply)",
-    //   answers: [
-    //     { text: "Europa", correct: false },
-    //     { text: "Ganymede", correct: false },
-    //     { text: "Enceladus", correct: true },
-    //     { text: "Io", correct: false },
-    //   ],
-    //   typeOfQuestion: "radio",
-    // },
-    // {
-    //   question: "The Great Red Spot is a storm on which planet?",
-    //   answers: [
-    //     { text: "Jupiter", correct: true },
-    //     { text: "Saturn", correct: false },
-    //     { text: "Neptune", correct: false },
-    //   ],
-    //   typeOfQuestion: "radio",
-    // },
-    // {
-    //   question: "A comet is primarily composed of:",
-    //   answers: [
-    //     { text: "Rock and Metal", correct: false },
-    //     { text: "Ice and Dust", correct: true },
-    //     { text: "Gas and Plasma", correct: false },
-    //   ],
-    //   typeOfQuestion: "radio",
-    // },
-    // {
-    //   question: "Pluto is classified as a dwarf planet. (True/False)",
-    //   answers: [
-    //     { text: "True", correct: true },
-    //     { text: "False", correct: false },
-    //   ],
-    //   typeOfQuestion: "trueOrFalse",
-    // },
-    // {
-    //   question: "Which planet is known for its beautiful ring system?",
-    //   answers: [
-    //     { text: "Saturn", correct: true },
-    //     { text: "Jupiter", correct: false },
-    //     { text: "Uranus", correct: false },
-    //     { text: "Pluto", correct: false },
-    //   ],
-    //   typeOfQuestion: "radio",
-    // },
-    // {
-    //   question: "The Oort Cloud is a region of space that contains primarily:",
-    //   answers: [
-    //     { text: "Comets", correct: true },
-    //     { text: "Asteroids", correct: false },
-    //     { text: "Dwarf Planets", correct: false },
-    //   ],
-    //   typeOfQuestion: "radio",
-    // },
-    // {
-    //   question: "The sun is a: (Select all that apply)",
-    //   answers: [
-    //     { text: "Planet", correct: false },
-    //     { text: "Moon", correct: false },
-    //     { text: "Star", correct: true },
-    //     { text: "Asteroid", correct: false },
-    //   ],
-    //   typeOfQuestion: "radio",
-    // },
-    // {
-    //   question: "The first human to walk on the moon was:",
-    //   answers: [
-    //     { text: "Buzz Aldrin", correct: false },
-    //     { text: "Neil Armstrong", correct: true },
-    //     { text: "Yuri Gagarin", correct: false },
-    //   ],
-    //   typeOfQuestion: "radio",
-    // },
-    // {
-    //   question: "Black holes emit light. (True/False)",
-    //   answers: [
-    //     { text: "True", correct: false },
-    //     { text: "False", correct: true },
-    //   ],
-    //   typeOfQuestion: "trueOrFalse",
-    // },
-    // {
-    //   question:
-    //     'Which of the following are considered "rocky" or "terrestrial" planets? (Select all that apply)',
-    //   answers: [
-    //     { text: "Earth", correct: true },
-    //     { text: "Jupiter", correct: false },
-    //     { text: "Mars", correct: true },
-    //     { text: "Venus", correct: true },
-    //   ],
-    //   typeOfQuestion: "checkbox",
-    // },
-    // {
-    //   question:
-    //     "The International Space Station (ISS) orbits the moon. (True/False)",
-    //   answers: [
-    //     { text: "True", correct: false },
-    //     { text: "False", correct: true },
-    //   ],
-    //   typeOfQuestion: "trueOrFalse",
-    // },
+    },
+    {
+      question: "A light-year is a unit of time. (True/False)",
+      answers: [
+        { text: "True", correct: false },
+        { text: "False", correct: true },
+      ],
+      typeOfQuestion: "trueOrFalse",
+    },
+    {
+      question: 'Which planet is known as the "Red Planet"?',
+      answers: [
+        { text: "Mars", correct: true },
+        { text: "Venus", correct: false },
+        { text: "Jupiter", correct: false },
+      ],
+      typeOfQuestion: "radio",
+    },
+    {
+      question:
+        "The asteroid belt is located between which two planets? (Select all that apply)",
+      answers: [
+        { text: "Earth and Mars", correct: false },
+        { text: "Mars and Jupiter", correct: true },
+        { text: "Jupiter and Saturn", correct: false },
+      ],
+      typeOfQuestion: "radio",
+    },
+    {
+      question:
+        "The Hubble Space Telescope is named after the famous scientist Edwin Hubble. (True/False)",
+      answers: [
+        { text: "True", correct: false },
+        { text: "False", correct: false },
+      ],
+      typeOfQuestion: "trueOrFalse",
+    },
+    {
+      question:
+        "Which moon is known for its geysers of water vapor? (Select all that apply)",
+      answers: [
+        { text: "Europa", correct: false },
+        { text: "Ganymede", correct: false },
+        { text: "Enceladus", correct: true },
+        { text: "Io", correct: false },
+      ],
+      typeOfQuestion: "radio",
+    },
+    {
+      question: "The Great Red Spot is a storm on which planet?",
+      answers: [
+        { text: "Jupiter", correct: true },
+        { text: "Saturn", correct: false },
+        { text: "Neptune", correct: false },
+      ],
+      typeOfQuestion: "radio",
+    },
+    {
+      question: "A comet is primarily composed of:",
+      answers: [
+        { text: "Rock and Metal", correct: false },
+        { text: "Ice and Dust", correct: true },
+        { text: "Gas and Plasma", correct: false },
+      ],
+      typeOfQuestion: "radio",
+    },
+    {
+      question: "Pluto is classified as a dwarf planet. (True/False)",
+      answers: [
+        { text: "True", correct: true },
+        { text: "False", correct: false },
+      ],
+      typeOfQuestion: "trueOrFalse",
+    },
+    {
+      question: "Which planet is known for its beautiful ring system?",
+      answers: [
+        { text: "Saturn", correct: true },
+        { text: "Jupiter", correct: false },
+        { text: "Uranus", correct: false },
+        { text: "Pluto", correct: false },
+      ],
+      typeOfQuestion: "radio",
+    },
+    {
+      question: "The Oort Cloud is a region of space that contains primarily:",
+      answers: [
+        { text: "Comets", correct: true },
+        { text: "Asteroids", correct: false },
+        { text: "Dwarf Planets", correct: false },
+      ],
+      typeOfQuestion: "radio",
+    },
+    {
+      question: "The sun is a: (Select all that apply)",
+      answers: [
+        { text: "Planet", correct: false },
+        { text: "Moon", correct: false },
+        { text: "Star", correct: true },
+        { text: "Asteroid", correct: false },
+      ],
+      typeOfQuestion: "radio",
+    },
+    {
+      question: "The first human to walk on the moon was:",
+      answers: [
+        { text: "Buzz Aldrin", correct: false },
+        { text: "Neil Armstrong", correct: true },
+        { text: "Yuri Gagarin", correct: false },
+      ],
+      typeOfQuestion: "radio",
+    },
+    {
+      question: "Black holes emit light. (True/False)",
+      answers: [
+        { text: "True", correct: false },
+        { text: "False", correct: true },
+      ],
+      typeOfQuestion: "trueOrFalse",
+    },
+    {
+      question:
+        'Which of the following are considered "rocky" or "terrestrial" planets? (Select all that apply)',
+      answers: [
+        { text: "Earth", correct: true },
+        { text: "Jupiter", correct: false },
+        { text: "Mars", correct: true },
+        { text: "Venus", correct: true },
+      ],
+      typeOfQuestion: "checkbox",
+    },
+    {
+      question:
+        "The International Space Station (ISS) orbits the moon. (True/False)",
+      answers: [
+        { text: "True", correct: false },
+        { text: "False", correct: true },
+      ],
+      typeOfQuestion: "trueOrFalse",
+    },
   ];
   // -_-
   
@@ -193,10 +191,21 @@ let questions = [
   let answerBox = document.getElementById("answerChoices");
   let questionShow = document.getElementById("theQuestion");
   
-  // Global declaration of questionIndex and scoreCounter and checkboxes
+  // Global declaration of questionIndex and scoreCounter and checkboxes and Lists
   let questionIndex = 0;
   let scoreCounter = 0;
+  
+//   Declaring a array for the checking of correct checkbox answears
   let checkedCheckboxes = []
+  // -_-
+
+//   Declaring an array for storing the answers and printing when quiz finish
+  let answerResult = [];
+  // -_-
+
+  // Creatijng the ul list which will be used for showing the reuslts.
+  let newUl = document.createElement('ul');
+  newUl.classList.add('resultList');
   // -_-
   
   // Changing from begin slide to the "instructions slide"
@@ -221,34 +230,25 @@ let questions = [
   function startQuiz() {
     questionIndex = 0;
     scoreCounter = 0;
-
-    console.log(scoreCounter, questionIndex);
     nextBtn.innerHTML = "Next";
-
+    newUl.innerHTML = '';
     showQuestions();
   }
   // -_-
   
-  // Listening to the next button
-  // nextBtn.addEventListener('click', () => {
-  //     if (questionIndex < questions.length){
-  //         alert('Hej')
-  //     }else{
-  //         alert('nåt gick fel')
-  //     }
-  // });
-  // -_-
   
   // Funktion för att visa frågorna.
   function showQuestions() {
     resetQuestionBox();
-  
     // Declaring the question and number.
     let currentQuestion = questions[questionIndex];
     let currentQuestionNum = questionIndex + 1;
     // -_-
-  
-    // setting the value of the h2 to the question and number
+    
+   
+    
+    answerResult.push({currentQuestionNum, currentQuestion});
+    // setting the value of the h 2 to the question and number
     questionShow.innerHTML = currentQuestionNum + ". " + currentQuestion.question;
   
     // Checking what type of question
@@ -256,23 +256,13 @@ let questions = [
       drawTrueFalse(currentQuestion.answers);
     } else if (currentQuestion.typeOfQuestion === "radio") {
       drawRadio(currentQuestion.answers);
-    } /*(currentQuestion.typeOfQuestion === 'checkbox')*/ else {
+    }  else {
       drawCheckbox(currentQuestion.answers);
     }
-    // -_-
-    // // looping and appending the answers to the answer box
-    // currentQuestion.answers.forEach(answer => {
-    //     let button = document.createElement('button');
-    //     button.innerHTML = answer.text;
-    //     button.classList.add('btn');
-    //     button.classList.add('btnAnswers');
-    //     answerBox.appendChild(button);
-    // });
-    // // -_-
   }
   // -_-
   
-  //Funktion för att ta bort next knapp innan svar är givet!
+  //Function removeing old stuff and btn
   function resetQuestionBox() {
     nextBtn.style.display = "none";
     while (answerBox.firstChild) {
@@ -293,7 +283,6 @@ let questions = [
   
       // Check if right answer is choosen
       if (answer.correct) {
-        // console.log(answer.correct);
         button.dataset.correct = answer.correct;
       }
       button.addEventListener("click", selectAnswer);
@@ -305,9 +294,9 @@ let questions = [
   
   // Print radio questions
   function drawRadio(question) {
-    // console.log(question);
+   
     question.forEach((answer) => {
-    //   console.log(answer);
+   
       let radioBtn = document.createElement("input");
       radioBtn.type = "radio";
       radioBtn.name = "radioGroup";
@@ -345,7 +334,6 @@ let questions = [
       answerBox.appendChild(checkLabel);
       // Check if right answer ios choosen
       if (answer.correct) {
-        // console.log(answer.correct);
         checkBtn.dataset.correct = answer.correct;
       }
       checkBtn.addEventListener("click", selectAnswer);
@@ -359,13 +347,18 @@ let questions = [
     let selected = e.target;
     let correctAnswer = selected.dataset.correct === "true";
     selected.classList.toggle("choosen");
-    // console.log(selected);
+    console.log(selected);
     if (
       correctAnswer &&
       !answerChoices.firstChild.innerHTML.includes("checkbox")
     ) {
+       
       scoreCounter++;
-
+      answerResult[questionIndex].correctAnswer = true;
+      console.log(answerResult);
+      // Adding the value of color for array of resultList
+      console.log(questionIndex);
+     
     } else if (answerChoices.firstChild.innerHTML.includes("checkbox")) {
 
         // Finding all the cheked checkboxes
@@ -387,9 +380,6 @@ let questions = [
     nextBtn.style.display = "block";
   // -_-
 
-    // Reset the checkedCheckboxes array
-    
-    //-_-
   }
   //-_-
   
@@ -402,11 +392,12 @@ let questions = [
       givePointsForCheckbox(checkedCheckboxes);
       checkedCheckboxes = [];
       }
+     
+      console.log(prevScore);
       console.log(questionIndex);
       console.log(scoreCounter);
     } else { 
       startQuiz();
-      console.log("balle");
       questionShow.removeAttribute('style');
     }
   });
@@ -419,8 +410,11 @@ let questions = [
     // console.log(pointOrNot);
     if (questionIndex < questions.length) {
       showQuestions();
+      
     } else {
       showScore();
+      
+      
     }
   }
   // -_-
@@ -436,8 +430,28 @@ let questions = [
     }else {
         questionShow.style.background = 'red';
     }
+    console.log(answerResult);
+
+    answerResult.forEach((x) => {
+        let newLi = document.createElement('li');
+        let liP = document.createElement('p');
+        let pText = document.createTextNode(x.currentQuestionNum +'. ' +  x.currentQuestion.question);
+        liP.appendChild(pText);
+        newLi.append(liP);
+        newUl.appendChild(newLi);
+        if(x.correctAnswer){
+            newLi.style.background = 'green';
+        }else {
+            newLi.style.background = 'red';
+        }
+    });
+    answerBox.appendChild(newUl);
+   
     nextBtn.innerHTML = "Play Again?";
     nextBtn.style.display = "block";
+    answerResult = [];
+    
+    
   }
   // -_-
 
@@ -445,15 +459,21 @@ let questions = [
   // Funciton for giving points on checkboxes
   function givePointsForCheckbox(checkbox){
     let whatEver = [];
+   
     checkbox.forEach((box) => {
             whatEver.push(box.attributes[3].value);
     })
+
     let checker = (element) => element === "true";
     let realPointorNot = whatEver.every(checker);
 
     if(realPointorNot && whatEver.length > 1){
+        answerResult[questionIndex-1].correctAnswer = true; /* Fattar inte riktigt detta själv... */
         scoreCounter++;
+        alert('hej!');
+        
     }
+
   };
 
   // -_-

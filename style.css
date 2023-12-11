@@ -273,3 +273,15 @@ label {
     font-size: 4rem;
 }
 /* -_- */
+
+
+/* List styling */
+.resultList {
+  list-style-type: none;
+}
+
+.resultList li {
+  margin: 1rem 0;
+  
+}
+/* -_- */
