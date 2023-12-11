@@ -19,7 +19,8 @@ let questions = [
         { text: "Saturn", correct: false },
       ],
       typeOfQuestion: "radio",
-    },
+     }
+    ,
     {
       question: "Which of the following are gas giants? (Select all that apply)",
       answers: [
@@ -66,12 +67,13 @@ let questions = [
         { text: "Jupiter and Saturn", correct: false },
       ],
       typeOfQuestion: "radio",
-    },
+    }
+    ,
     {
       question:
         "The Hubble Space Telescope is named after the famous scientist Edwin Hubble. (True/False)",
       answers: [
-        { text: "True", correct: false },
+        { text: "True", correct: true },
         { text: "False", correct: false },
       ],
       typeOfQuestion: "trueOrFalse",
@@ -165,7 +167,7 @@ let questions = [
       answers: [
         { text: "Earth", correct: true },
         { text: "Jupiter", correct: false },
-        { text: "Mars", correct: true },
+        { text: "Pluto", correct: false },
         { text: "Venus", correct: true },
       ],
       typeOfQuestion: "checkbox",
@@ -178,7 +180,7 @@ let questions = [
         { text: "False", correct: true },
       ],
       typeOfQuestion: "trueOrFalse",
-    },
+    }
   ];
   // -_-
   
@@ -199,7 +201,7 @@ let questions = [
   let checkedCheckboxes = []
   // -_-
 
-//   Declaring an array for storing the answers and printing when quiz finish
+    //   Declaring an array for storing the answers and printing when quiz finish
   let answerResult = [];
   // -_-
 
@@ -236,7 +238,6 @@ let questions = [
   }
   // -_-
   
-  
   // Funktion för att visa frågorna.
   function showQuestions() {
     resetQuestionBox();
@@ -245,13 +246,15 @@ let questions = [
     let currentQuestionNum = questionIndex + 1;
     // -_-
     
-   
-    
+    //Pushing the current question to an new array for checking and printing answers later in showScore
     answerResult.push({currentQuestionNum, currentQuestion});
+    // -_-
+
     // setting the value of the h 2 to the question and number
     questionShow.innerHTML = currentQuestionNum + ". " + currentQuestion.question;
-  
-    // Checking what type of question
+    // -_-
+
+    // Checking what type of question and calling the respective function.
     if (currentQuestion.typeOfQuestion === "trueOrFalse") {
       drawTrueFalse(currentQuestion.answers);
     } else if (currentQuestion.typeOfQuestion === "radio") {
@@ -281,7 +284,7 @@ let questions = [
       button.classList.add("btnAnswers");
       answerBox.appendChild(button);
   
-      // Check if right answer is choosen
+      // Check if right answer is choosen and adding a data-set to the button
       if (answer.correct) {
         button.dataset.correct = answer.correct;
       }
@@ -308,9 +311,8 @@ let questions = [
   
       answerBox.appendChild(radioLabel);
   
-      // Check if right answer ios choosen
+      // Check if right answer ios choosen and adding a data set to the radio btn.
       if (answer.correct) {
-        // console.log(answer.correct);
         radioBtn.dataset.correct = answer.correct;
       }
       radioBtn.addEventListener("click", selectAnswer);
@@ -321,21 +323,23 @@ let questions = [
   
   // Print Checkbox questions
   function drawCheckbox(question) {
+    // Looping and creating the checkbox answer choices.
     question.forEach((answer) => {
       let checkBtn = document.createElement("input");
       checkBtn.type = "checkbox";
       checkBtn.name = "checkGroup";
       checkBtn.value = answer.text;
       let checkLabel = document.createElement("label");
-  
       checkLabel.appendChild(checkBtn);
       checkLabel.appendChild(document.createTextNode(answer.text));
-  
       answerBox.appendChild(checkLabel);
-      // Check if right answer ios choosen
+
+      // Check if right answer ios choosen and adding the correct data set to the checkbox
       if (answer.correct) {
         checkBtn.dataset.correct = answer.correct;
       }
+      // -_-
+
       checkBtn.addEventListener("click", selectAnswer);
       // -_-
     });
@@ -347,24 +351,20 @@ let questions = [
     let selected = e.target;
     let correctAnswer = selected.dataset.correct === "true";
     selected.classList.toggle("choosen");
-    console.log(selected);
+    console.log(answerResult);
+    // Checking what kind of question was answerd and pushing the value to the answerResult array and adding score to scoreCounter
     if (
       correctAnswer &&
       !answerChoices.firstChild.innerHTML.includes("checkbox")
     ) {
-       
       scoreCounter++;
       answerResult[questionIndex].correctAnswer = true;
-      console.log(answerResult);
-      // Adding the value of color for array of resultList
-      console.log(questionIndex);
-     
     } else if (answerChoices.firstChild.innerHTML.includes("checkbox")) {
 
         // Finding all the cheked checkboxes
         checkedCheckboxes = Array.from(document.querySelectorAll('input[name=checkGroup]:checked'));
         // -_-
-
+        
     // -_-
 
     }
@@ -375,7 +375,7 @@ let questions = [
       });
     }
     // -_-
-   
+
     //Dispaly Next button
     nextBtn.style.display = "block";
   // -_-
@@ -389,13 +389,9 @@ let questions = [
     if (questionIndex < questions.length) {
       nextQuestion();
       if(checkedCheckboxes.length > 0){
-      givePointsForCheckbox(checkedCheckboxes);
-      checkedCheckboxes = [];
-      }
-     
-      console.log(prevScore);
-      console.log(questionIndex);
-      console.log(scoreCounter);
+        givePointsForCheckbox(checkedCheckboxes);
+        checkedCheckboxes = [];
+        }
     } else { 
       startQuiz();
       questionShow.removeAttribute('style');
@@ -407,14 +403,12 @@ let questions = [
   // Start the new question
   function nextQuestion() {
     questionIndex++;
-    // console.log(pointOrNot);
     if (questionIndex < questions.length) {
       showQuestions();
       
+      
     } else {
       showScore();
-      
-      
     }
   }
   // -_-
@@ -430,12 +424,20 @@ let questions = [
     }else {
         questionShow.style.background = 'red';
     }
-    console.log(answerResult);
+    // console.log(answerResult);
 
     answerResult.forEach((x) => {
         let newLi = document.createElement('li');
         let liP = document.createElement('p');
-        let pText = document.createTextNode(x.currentQuestionNum +'. ' +  x.currentQuestion.question);
+        let pText = document.createTextNode(x.currentQuestionNum +'. ' +  x.currentQuestion.question + "The right answer is: ");
+       x.currentQuestion.answers.forEach((answer) => {
+        if(answer.correct){
+            let correctNess = answer.text;
+            console.log(correctNess);
+            pText.textContent += correctNess + " ";
+        }
+       });
+        // console.log(x.currentQuestion.answers);
         liP.appendChild(pText);
         newLi.append(liP);
         newUl.appendChild(newLi);
@@ -445,6 +447,7 @@ let questions = [
             newLi.style.background = 'red';
         }
     });
+    // console.log(answerResult);
     answerBox.appendChild(newUl);
    
     nextBtn.innerHTML = "Play Again?";
@@ -470,8 +473,7 @@ let questions = [
     if(realPointorNot && whatEver.length > 1){
         answerResult[questionIndex-1].correctAnswer = true; /* Fattar inte riktigt detta själv... */
         scoreCounter++;
-        alert('hej!');
-        
+        console.log(answerResult);
     }
 
   };
