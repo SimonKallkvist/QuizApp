@@ -189,6 +189,11 @@ let questions = [
   let nextBtn = document.getElementById("nextBtn");
   // -_-
   
+  // Song declaration
+  let song = new Audio("/sounds/Tank.mp3");
+song.volume = 0.05;
+// -_-
+
   // Global declaration of elments from the DOM
   let answerBox = document.getElementById("answerChoices");
   let questionShow = document.getElementById("theQuestion");
@@ -225,6 +230,7 @@ let questions = [
     setTimeout(function () {
       quizApp.style.scale = "1";
     }, 500);
+    playSong();
   });
   // -_-
   
@@ -241,6 +247,7 @@ let questions = [
   // Funktion för att visa frågorna.
   function showQuestions() {
     resetQuestionBox();
+    
     // Declaring the question and number.
     let currentQuestion = questions[questionIndex];
     let currentQuestionNum = questionIndex + 1;
@@ -262,6 +269,7 @@ let questions = [
     }  else {
       drawCheckbox(currentQuestion.answers);
     }
+    
   }
   // -_-
   
@@ -394,6 +402,7 @@ let questions = [
         }
     } else { 
       startQuiz();
+      playSong();
       questionShow.removeAttribute('style');
     }
   });
@@ -405,8 +414,6 @@ let questions = [
     questionIndex++;
     if (questionIndex < questions.length) {
       showQuestions();
-      
-      
     } else {
       showScore();
     }
@@ -416,6 +423,7 @@ let questions = [
   // Reveal Score at the end
   function showScore() {
     resetQuestionBox();
+   
     questionShow.innerHTML = `You scored a ${scoreCounter} out of ${questions.length} possible!`;
     if(scoreCounter >= (questions.length)*.9){
         questionShow.style.background = 'green';
@@ -453,6 +461,7 @@ let questions = [
     nextBtn.innerHTML = "Play Again?";
     nextBtn.style.display = "block";
     answerResult = [];
+    stopSong();
     
     
   }
@@ -495,4 +504,12 @@ let questions = [
   });
   // -_-
   
+function playSong(){
+    song.play();
+}
+
+function stopSong(){ 
+    song.pause();
+    song.currentTime = 0;
+}
   startQuiz();
